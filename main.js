@@ -92,7 +92,8 @@ function initBuffers(gl) {
     position: positionBuffer,
     };
 }
-
+const buffers = initBuffers(gl);
+drawScene(gl, programInfo, buffers);
 function drawScene(gl, programInfo, buffers) {
     gl.clearColor(0.0, 0.0, 0.0, 1.0);  // Clear to black, fully opaque
     gl.clearDepth(1.0);                 // Clear everything
